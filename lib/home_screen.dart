@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_group_project/Service/Bloc/bloc.dart';
-import 'package:flutter_group_project/Service/Screen/ServiceCreateUpdateScreen.dart';
-import 'package:flutter_group_project/Service/Screen/screens.dart';
 import 'dart:math';
+
+import 'bloc/service/service_bloc.dart';
+import 'bloc/service/service_state.dart';
 
 class ServiceMainScreen extends StatelessWidget {
   static const routeName = '/category_screen';

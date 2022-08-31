@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_group_project/Service/Model/Service.dart';
 import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
 
@@ -8,7 +8,7 @@ class ServiceDataProvider {
   final _baseUrl = 'http://192.168.42.232:5000/api';
   final http.Client httpClient;
 
-  ServiceDataProvider({@required this.httpClient}) : assert(httpClient != null);
+  ServiceDataProvider({required this.httpClient}) : assert(httpClient != null);
 
   Future<Service> createService(Service service) async {
 
@@ -36,7 +36,7 @@ class ServiceDataProvider {
     }
   }
 
-  Future<List<Service>> getServices() async {
+  Future<List> getServices() async {
     try{
 
       final response = await http.get('${_baseUrl}/services');

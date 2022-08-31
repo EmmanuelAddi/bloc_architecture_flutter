@@ -1,6 +1,6 @@
-import 'package:equatable/equatable.dart';
-import 'package:flutter_group_project/Service/Service.dart';
+import 'dart:developer';
 
+import 'package:equatable/equatable.dart';
 
 class ServiceState extends Equatable {
   const ServiceState();
@@ -13,7 +13,7 @@ class ServiceLoading extends ServiceState {}
 class ServicesLoadSuccess extends ServiceState{
   final List<Service> services;
 
-  ServicesLoadSuccess([this.services = const []]);
+  const ServicesLoadSuccess([this.services = const []]);
 
   @override
   List<Object> get props => [services];

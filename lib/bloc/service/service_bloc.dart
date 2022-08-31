@@ -1,14 +1,14 @@
+import 'package:bloc_example/bloc/service/service_event.dart';
+import 'package:bloc_example/bloc/service/service_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flutter_group_project/Service/Bloc/bloc.dart';
-import 'package:flutter_group_project/Service/Repository/Service_repository.dart';
-
+import '../../repository/Service_repository.dart';
 
 class ServiceBloc extends Bloc<ServiceEvent, ServiceState> {
   final ServiceRepository serviceRepository;
 
-  ServiceBloc({@required this.serviceRepository})
+  ServiceBloc({required this.serviceRepository})
       : assert(serviceRepository != null),
         super(ServiceLoading());
 

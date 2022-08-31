@@ -1,11 +1,12 @@
-import 'package:flutter_group_project/Service/Model/Service.dart';
+import 'dart:developer';
+
 import 'package:meta/meta.dart';
-import '../Service.dart';
+import '../data_provider/Service_data.dart';
 
 class ServiceRepository {
   final ServiceDataProvider dataProvider;
 
-  ServiceRepository({@required this.dataProvider})
+  ServiceRepository({required this.dataProvider})
       : assert(dataProvider != null);
 
   Future<Service> createService(Service service) async {
